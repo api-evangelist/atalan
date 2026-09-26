@@ -1,23 +1,74 @@
 aid: atalan
+
 name: Atalan
-description: 'Atalan is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://atalan.com/wp-content/uploads/2023/09/atalan-newsroom-featured.jpg
+
+description: 'Atalan provides a technology-enabled clinical partnership that gives doctors, medical centers, and hospitals unprecedented access to a network of leading clinical laboratories. By offering a comprehensive platform with tools, dashboards, and outreach services, Atalan streamlines lab testing, results delivery, and partnership management, improving diagnostic decision-making and patient outcomes across the United States.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atalan/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Healthcare
+- Laboratory
+- Diagnostics
+- Platform
+- Access
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atalan-hosts.yml
+- type: Vendors
+  url: vendors/atalan-vendors.yml
+- type: DomainSecurity
+  url: security/atalan-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.atalan.com
+- type: Documentation
+  url: https://atalan.com/access-hub/
+- type: APIReference
+  url: https://atalan.com/access-outreach/
+- type: GettingStarted
+  url: https://atalan.com/about/
+- type: Blog
+  url: https://atalan.com/newsroom/
+- type: TermsOfService
+  url: https://atalan.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://atalan.com/privacy-policy/
+
+apis: []
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: Access to https://atalan.com/access-hub/ returned HTTP 429 bot challenge, preventing API discovery.
+  evidence:
+    - url: https://atalan.com/access-hub/
+      status: 429
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
